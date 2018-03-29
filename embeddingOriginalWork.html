@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embeds Embeds Embeds!!</title>
+  </head>
+  <body>
+    <h1>Plentiful Embeds!</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dM0d9uUgVSc?rel=0&amp;showinfo=0&amp;start=180" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>My Favorite Song</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.43891078966!2d-122.31251618491682!3d47.656469292525756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f329dececd%3A0xc074dbf308a37dc0!2sRobinson+Center!5e0!3m2!1sen!2sus!4v1522366024528" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <p>I dropped out of high school thanks to this ^</p>
+    <iframe src="https://titanembeds.com/embed/295085744249110529" width="50" height="50"></iframe>
+    <p>My Discord Server</p>
+    <video preload="true" autoplay loop style="width:100%; border-radius: 10px;">
+      <source src="https://titanembeds.com/static/video/v2/titanembeds.mp4" type="video/mp4">
+    </video>
+    <p>My product overview</p>
+    <object width="400" height="400" data="https://courses.cs.washington.edu/courses/cse154/18sp/18sp-data/documents/cse154-18sp-syllabus.pdf"></object>
+    <p>This is the course syllabus of the class I am currently TAing</p>
+    <audio controls>
+      <source src="http://arbr.arbronyradio.com:8018/stream.mp3" type="audio/mpeg">
+    </audio>
+    <p>Pony related music!</p>
+    <div id="rss_feed" 
+     data-feed="https://monoirre.tumblr.com/rss" 
+     data-count="12">Loading RSS Feed..</div>
+    <p>My favorite UW Artist</p>
+    
+    
+    
+    <script>
+      alert("Welcome to my embeds!");
+    </script>
+    <script src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("feeds", "1")
+    </script>
+  <script>
+    
+    function fetchRSSFeed() {
+      var element = document.getElementById("rss_feed");
+      var feed = new google.feeds.Feed(element.dataset.feed);     
+      feed.setNumEntries(element.dataset.count);
+      feed.load(showRSSFeed);
+    }
+
+    function showRSSFeed(result) {
+
+      var html = "";
+
+      if (!result.error) {
+        var entries = result.feed.entries;
+        for (var i = 0; i < entries.length; i++) {
+          html += "<li><a href='" + entries[i].link + "'target='_blank'>" + entries[i].title + "</a></li>"
+        }
+      } else {
+        html = "Error: " + result.error.message;
+      }
+
+      document.getElementById("rss_feed").innerHTML = "<ul>" + html + "</ul>";
+    }
+
+    window.onload = function() {
+      fetchRSSFeed();
+    }
+  </script>
+  </body>
+</html>
