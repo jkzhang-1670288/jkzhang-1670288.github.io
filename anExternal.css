@@ -21,8 +21,8 @@ img {
 
 #ponyville {
   background-image: url(https://vignette.wikia.nocookie.net/mlp/images/0/04/Frame_of_empty_Ponyville_street_S1E20.png/revision/latest?cb=20130711202024);
-  height: 1280px;
-  width: 720px;
+  width: 1280px;
+  height: 720px;
   position: relative;
   background-size: cover;
 }
