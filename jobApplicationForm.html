@@ -13,9 +13,19 @@
 <p>&nbsp;</p>
 
 <form role="form" action="http://gclass.alexburner.com/formtest.php" method="post">
+	<!-- because some sites like to put their submit button at the top too -->
+	<input class="btn btn-primary btn-lg" type="submit" value="Submit form">
+    
+    <p>&nbsp;</p>
 
 	<fieldset class="form-horizontal" >
 		<legend>Account</legend>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">Username</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="text" name="username">
+			</div>
+		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Email</label>
 			<div class="col-sm-9">
@@ -32,6 +42,27 @@
 			<label class="col-sm-3 control-label">Repeat password</label>
 			<div class="col-sm-9">
 				<input class="form-control" type="password" name="repeat_password">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">Backup password</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="password" name="backup_password">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 control-label">Would you like some marketing emails?</label>
+			<div class="col-sm-offset-1 col-sm-11">
+				<div class="radio">
+					<label>
+						<input type="radio" name="market" value="yus">Totally!
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="market" value="noo">Nah bruh
+					</label>
+				</div>
 			</div>
 		</div>
 	</fieldset>
@@ -224,10 +255,57 @@
 			<label class="control-label">Describe a recent project</label>
 			<textarea class="form-control" name="project" rows="6"></textarea>
 		</div>
+		<div class="form-group">
+			<label class="control-label">What kind of education you've received?</label>
+			<textarea class="form-control" name="education" rows="3"></textarea>
+		</div>
 	</fieldset>
 
 	<p>&nbsp;</p>
-
+    
+    <fieldset>
+    	<legend>Prove you're a human</legend>
+		<div class="form-group row">
+			<label class="col-sm-12 control-label">Which of the following are part of the Mane 6 (Check all that apply)</label>
+			<div class="col-sm-offset-1 col-sm-11">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="bot_pony_rd" value="rainbowdash">
+						Rainbow Dash
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="bot_pony_fs" value="fluttershy">
+						Fluttershy
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="bot_pony_s" value="spike">
+						Spike
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="bot_pony_l" value="luna">
+						Luna
+					</label>
+				</div>
+			</div>
+		</div>
+        
+        <div class="form-group row">
+        	<label class="col-sm-12 control-label">What is the best CSE class?</label>
+            <select name="bot_cse">
+            	<option value="CSE 154">CSE 154</option>
+                <option value="CSE 142">CSE 142</option>
+           	</select>
+        </div>
+    </fieldset>
+    
+    <p>&nbsp;</p>
+    
 	<input class="btn btn-primary btn-lg" type="submit" value="Submit form">
 
 	<p>&nbsp;</p>
